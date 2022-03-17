@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chaerset="UFT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RYU </title>
+</head>
+<body>
+    <p> Instalacion del corta fuegos RYU </p>
+
+    <h2> # sudo apt-get update </h2>
+    <h2> # sudo apt-get install git </h2>
+    <h2> # sudo apt-get install Python.pip </h2>
+    <h2> # git clone git://github.com/osrg/ryu.git </h2>
+    <h2> # sudo pip install –r tolos/pip-requires </h2>
+    <h2> # ryu manager </h2>
+    <h2> # export RYU_APP=/usr/local/lib/python2.7/dist-packages/ryu/app/ </h2>
+    <h2> # ryu-manager --verbose $RYU_APP/ryu.app.rest_firewall  </h2>
+    <h2> # mininet> sh ovs-vsctl set bridge s1 protocols=OpenFlow13  </h2>
+    <h2> # mininet> dpctl dump-flows -O OpenFlow13 </h2>
+    <h2> # curl -X PUT http://localhost:8080/firewall/module/enable/0000000000000001 </h2>
+    <h2> # curl -X POST -d '{"nw_src": "10.0.0.2/32", "nw_dst": "10.0.0.1/32", "nw_proto": "ICMP"}' http://localhost:8080/firewall/rules/0000000000000001 </h2>
+    <h2> # curl -X POST -d '{"nw_src": "10.0.0.1/32", "nw_dst": "10.0.0.2/32", "nw_proto": "ICMP"}' http://localhost:8080/firewall/rules/0000000000000001 </h2>
+    <h2> # curl -X DELETE -d '{"rule_id": "1"}' http://localhost:8080/firewall/rules/0000000000000001 </h2>
+    <h2> # curl -X DELETE -d '{"rule_id": "2"}' http://localhost:8080/firewall/rules/0000000000000001 </h2>
+
+</body>
+</html>
